@@ -86,18 +86,18 @@ barchartGC(~infected+treatment,data=femaleData, type= "percent")
 
 ###Numerical Descriptive Results
 ```{r}
-table <- xtabs(~infected + treatment, data=femaleData)
-rowPerc(table1)
-colPerc(table1)
+table2 <- xtabs(~infected + treatment, data=femaleData)
+rowPerc(table2)
+colPerc(table2)
 ```
 
 
 
 ## Inferential Results
 ```{r}
-chisq.test(table1)
-chisqtestGC(table1)
-fisher.test(table1)
+chisq.test(table2)
+chisqtestGC(table2)
+fisher.test(table2)
 ```
 
 
@@ -119,16 +119,16 @@ barchartGC(~infected+treatment,data= LGBTQData)
 
 ### Numerical Descriptive Results
 ```{r}
-table <- xtabs(~infected + treatment, data=LGBTQData)
-rowPerc(table1)
-colPerc(table1)
+table3 <- xtabs(~infected + treatment, data=LGBTQData)
+rowPerc(table3)
+colPerc(table3)
 ```
 
 ## Inferential Results
 ```{r}
-chisq.test(table1)
-chisqtestGC(table1)
-fisher.test(table1)
+chisq.test(table3)
+chisqtestGC(table3)
+fisher.test(table3)
 ```
 
 
@@ -148,14 +148,24 @@ DruggiesData = filter(FinalData, DrugUser =="yes")
 ## Descriptive Results
 ### Graphical Descriptive Results
 ```{r}
-barchartGC(~infected=treatment,data=DruggiesData)
-barchartGC(~infected=treatment,data=DruggiesData, type="percent")
+barchartGC(~infected+treatment,data=DruggiesData)
+barchartGC(~infected+treatment,data=DruggiesData, type="percent")
+```
+### Numerical Descriptive Results
+```{r}
+table4<-xtabs(~infected + treatment, data= DruggiesData)
+rowPerc(table4)
+colPerc(table4)
 ```
 
 
 
-
 ## Inferential Results
+```{r}
+chisq.test(table4)
+chisqtestGC(table4)
+fisher.test(table4)
+```
 
 
 # Overall Results and Conclusions
