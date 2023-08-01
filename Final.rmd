@@ -29,11 +29,11 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 ## Males
 
 ##Methods
-```{r}
-maleData = filter (FinalData, sex =="M")
-```
 
 ##Results
+```{r}
+maleData = filter (FinalData,sex == "M")
+```
 
 ##Descriptive Results
 
