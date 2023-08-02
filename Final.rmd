@@ -72,10 +72,13 @@ fisher.test(table1)
 The p-value is 0.0000000000001098 is so small that we failed to reject the null hypothesis. The vaccine is not effective in preventing Covid19 among males. On the Fisher's Exact Test there is a p-value 0.00000000000004613 meaning there is a difference in getting Covid 19 and being a male.
 
 ## Females
+$H_0$:The vaccine is not effective in preventing Covid19 in females
+$H_A$:The vaccine is effective in preventing Covid19 females
 
+The data for this study came from a FinalData file, provided by the professor.
 
 ##Methods
-
+The response method used is Cat~Cat. Data used was based on data from FinalData. We have to subset the data to include males. For graphical displays we are using:bar chart, numerical display and inferential results.
 
 ##Results
 ```{r} 
@@ -92,7 +95,7 @@ barchartGC(~infected+treatment,data=femaleData)
 barchartGC(~infected+treatment,data=femaleData, type= "percent")
 ```
 
-
+The graph shows that there was a difference in those who got Covid-19. There was 40% females who did get the vaccine and 60% females who received the placebo. There was no significant difference in those who were ok that received either the placebo or the vaccine.
 ###Numerical Descriptive Results
 ```{r}
 table2 <- xtabs(~infected + treatment, data=femaleData)
