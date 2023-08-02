@@ -29,6 +29,7 @@ $H_A$:The Covid19 vaccine (drug)is effective non subgroup users.
 
 ## Males
 $H_0$:The vaccine is not effective in preventing Covid in males.
+
 $H_A$:The vaccine is effective in preventing Covid 19 in males.
 
 Data for this study came from a FinalData file. provided by the proffesor.
@@ -68,8 +69,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The p-value is 0.0000000000001098 is so small that we failed to reject the null hypothesis. The vaccine is not effective in preventing Covid19 among males.Based of the Fisher's Exact
-Test the p- value 0.00000000000004613. The Fisher 
+The p-value is 0.0000000000001098 is so small that we failed to reject the null hypothesis. The vaccine is not effective in preventing Covid19 among males. On the Fisher's Exact Test there is a p-value 0.00000000000004613 meaning there is a difference in getting Covid 19 and being a male.
 
 ## Females
 
