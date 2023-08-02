@@ -102,7 +102,7 @@ table2 <- xtabs(~infected + treatment, data=femaleData)
 rowPerc(table2)
 colPerc(table2)
 ```
-
+Among those who got Covid-19 there was a 20% difference among the females who received the vaccine and the placebo. The was no difference in people that were ok.
 
 
 ## Inferential Results
