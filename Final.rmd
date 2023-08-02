@@ -102,7 +102,7 @@ table2 <- xtabs(~infected + treatment, data=femaleData)
 rowPerc(table2)
 colPerc(table2)
 ```
-Among those who got Covid-19 there was a 20% difference among the females who received the vaccine and the placebo. The was no difference in people that were ok.
+Among those who got Covid-19 there was a 20% difference among the females who received the vaccine(40%) and the placebo (60%). The was no difference in people that were ok.
 
 
 ## Inferential Results
@@ -112,7 +112,7 @@ chisqtestGC(table2)
 fisher.test(table2)
 ```
 
-
+The p-value from the chi-squared test is 0.0002732, which is too small therefore the vaccine is not effective in preventing Covid-19. On the Fisher's Exact Test there is a p-value 0.0002162 meaning there is a difference in getting Covid-19  and being a female. We fail to reject the null hypothesis because females can still get Covid-19 with the vaccine or the placebo.
 
 
 
