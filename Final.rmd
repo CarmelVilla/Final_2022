@@ -24,11 +24,18 @@ mutate(across(where(is.character), as.factor))
 
 A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
-
+$H_0$:The Covid19 vaccine(drug)is not effective among the subgroup users.
+$H_A$:The Covid19 vaccine (drug)is effective non subgroup users.
 
 ## Males
+$H_0$:The vaccine is not effective in preventing Covid in males.
+$H_A$:The vaccine is effective in preventing Covid 19 in males.
+
+Data for this study came from a FinalData file. provided by the proffesor.
 
 ##Methods
+The response method used is Cat~Cat. Data used was based on data from FinalData. We have to subset the data to include males. For graphical displays we are using: bar chart, numerical display and inferential results.
+
 
 ##Results
 ```{r}
@@ -43,6 +50,7 @@ barchartGC(~infected+treatment,data=maleData)
 barchartGC(~infected+treatment,data=maleData,type="percent")
 ```
 
+The graph shows that among the males who got Covid, there was 30% who received the vaccine and 70% who got the placebo. It also shows that there was a slight difference in those who received the vaccineand were ok.
 
 ###Numerical Descriptive Results
 ```{r}
@@ -50,6 +58,8 @@ table1 <- xtabs(~infected + treatment, data=maleData)
 rowPerc(table1)
 colPerc(table1)
 ```
+The table shows that the people who took the vaccine and got covid there was 2 times the difference. The males who took the placebo had a 70% chance of not being infected and 30% less likely for the people who took the vaccine. Among those who were ok and took the vaccine, there was no difference.
+
 
 ## Inferential Results
 ```{r}
@@ -58,8 +68,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-
-
+The p-value is 0.
 
 
 ## Females
