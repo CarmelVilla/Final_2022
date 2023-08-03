@@ -137,12 +137,16 @@ LGBTQData = filter(FinalData,LGBTQ =="gay")
 barchartGC(~infected+treatment,data= LGBTQData)
 ```
 
+This Graph shows that the people who got Covid 19, was the 80% of people who were vaccinated and 20%  that received the placebo. Among those who were okay there was no significant difference.
+
 ### Numerical Descriptive Results
 ```{r}
 table3 <- xtabs(~infected + treatment, data=LGBTQData)
 rowPerc(table3)
 colPerc(table3)
 ```
+
+In this chart it shows that there was a 69% difference in those who got Covid-19. There was 84% of people who received the vaccine and 15% of people who got the placebo. For the people who were okay, there was only about 10% difference.
 
 ## Inferential Results
 ```{r}
