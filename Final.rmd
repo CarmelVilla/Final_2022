@@ -155,7 +155,7 @@ chisqtestGC(table3)
 fisher.test(table3)
 ```
 
-
+The Chi=squared p-value is 0.0000000668, which is too small.Therefore the vaccine is not preventable against Covid-19 among the LGBTQ. In the Fisher's Exact Test the p-value 0.00000001029 meaning there is a small difference in getting Covid-19 and being LGBTQ. We fail toreject the null hypothesis because people in the lGBTQ Community can still get Covid-19 with the vaccine or the placebo.
 ## Druggies
 
 ## Methods
