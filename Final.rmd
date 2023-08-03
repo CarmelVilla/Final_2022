@@ -112,12 +112,20 @@ chisqtestGC(table2)
 fisher.test(table2)
 ```
 
-The p-value from the chi-squared test is 0.0002732, which is too small therefore the vaccine is not effective in preventing Covid-19. On the Fisher's Exact Test there is a p-value 0.0002162 meaning there is a difference in getting Covid-19  and being a female. We fail to reject the null hypothesis because females can still get Covid-19 with the vaccine or the placebo.
+The p-value from the chi-squared test is 0.0002732, which is too small therefore the vaccine is not effective in preventing Covid-19. In the Fisher's Exact Test there is a p-value 0.0002162 meaning there is a difference in getting Covid-19  and being a female. We fail to reject the null hypothesis because females can still get Covid-19 with the vaccine or the placebo.
 
 
 
 ## LGBTQ
+
+$H_0$:The vaccine is not effective in preventing Covid19 in  LGBTQ
+$H_A$:The vaccine is effective in preventing Covid19 in the LGBTQ
+
+Data for this study came from a FinalData file, provided by the professor.
 ## Methods
+The responce method used is Cat~Cat. Data used was based on data from FinalData. We have to subset the data to include LGBTQ. Graphical display: bar chart, numerical display and inferential results.
+
+
 ## Results
 ```{r}
 LGBTQData = filter(FinalData,LGBTQ =="gay")
