@@ -170,7 +170,15 @@ The Chi=squared p-value is 0.0000000668, which is too small.Therefore the vaccin
 
 ## Druggies
 
+$H_0$:The vaccine is not effective in preventing Covid-19 in Drug users
+
+$H_A$:The vaccine is effective in preventing Covid-19 in Drug users
+ 
+Data for this study came from a FinalData file provided by the professor.
+
 ## Methods
+
+The response method used Cat~Cat. Data used was based on data from FinalData. We have to subset the data to include males. For graphical displays we are using: bar chart, numerical display and inferential results.
 
 ## Results
 ```{r}
@@ -203,5 +211,12 @@ chisqtestGC(table4)
 fisher.test(table4)
 ```
 
+The P-value in the Chi-squared test is 0.000000002842 which is to small, therefore the vaccine is not able to prevent Covid-19 among drug users. In the Fisher's Exact Test the p-value is 0.0000000000232 meaning there is a small difference in getting Covid-19 and being a drug user. We fail to reject the null hypothesis since drug users are able to get Coivid-19 with or without the vaccine.
 
 # Overall Results and Conclusions
+
+In the original question we asked if the vaccine was able to prevent Covid-19 among these subgroups: Males, Females,LGBTQ and Drug users. We have found that the vaccine is ineffective at preventing Covid-19 in those subgroups.
+We asked if the vaccine was effective in preventing Covid-19
+
+
+
