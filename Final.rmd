@@ -25,9 +25,11 @@ mutate(across(where(is.character), as.factor))
 A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
 $H_0$:The Covid19 vaccine(drug)is not effective among the subgroup users.
-$H_A$:The Covid19 vaccine (drug)is effective non subgroup users.
+
+$H_A$:The Covid19 vaccine (drug)is effective non subgroup users.  
 
 ## Males
+
 $H_0$:The vaccine is not effective in preventing Covid in males.
 
 $H_A$:The vaccine is effective in preventing Covid 19 in males.
@@ -59,6 +61,7 @@ table1 <- xtabs(~infected + treatment, data=maleData)
 rowPerc(table1)
 colPerc(table1)
 ```
+
 The table shows that the people who took the vaccine and got covid there was 2 times the difference. The males who took the placebo had a 70% chance of not being infected and 30% less likely for the people who took the vaccine. Among those who were ok and took the vaccine, there was no difference.
 
 
@@ -72,7 +75,9 @@ fisher.test(table1)
 The p-value is 0.0000000000001098 is so small that we failed to reject the null hypothesis. The vaccine is not effective in preventing Covid19 among males. On the Fisher's Exact Test there is a p-value 0.00000000000004613 meaning there is a difference in getting Covid 19 and being a male.
 
 ## Females
+
 $H_0$:The vaccine is not effective in preventing Covid19 in females
+
 $H_A$:The vaccine is effective in preventing Covid19 females
 
 The data for this study came from a FinalData file, provided by the professor.
@@ -96,12 +101,14 @@ barchartGC(~infected+treatment,data=femaleData, type= "percent")
 ```
 
 The graph shows that there was a difference in those who got Covid-19. There was 40% females who did get the vaccine and 60% females who received the placebo. There was no significant difference in those who were ok that received either the placebo or the vaccine.
+
 ###Numerical Descriptive Results
 ```{r}
 table2 <- xtabs(~infected + treatment, data=femaleData)
 rowPerc(table2)
 colPerc(table2)
 ```
+
 Among those who got Covid-19 there was a 20% difference among the females who received the vaccine(40%) and the placebo (60%). The was no difference in people that were ok.
 
 
@@ -119,10 +126,13 @@ The p-value from the chi-squared test is 0.0002732, which is too small therefore
 ## LGBTQ
 
 $H_0$:The vaccine is not effective in preventing Covid19 in  LGBTQ
+
 $H_A$:The vaccine is effective in preventing Covid19 in the LGBTQ
 
 Data for this study came from a FinalData file, provided by the professor.
+
 ## Methods
+
 The responce method used is Cat~Cat. Data used was based on data from FinalData. We have to subset the data to include LGBTQ. Graphical display: bar chart, numerical display and inferential results.
 
 
@@ -156,6 +166,8 @@ fisher.test(table3)
 ```
 
 The Chi=squared p-value is 0.0000000668, which is too small.Therefore the vaccine is not preventable against Covid-19 among the LGBTQ. In the Fisher's Exact Test the p-value 0.00000001029 meaning there is a small difference in getting Covid-19 and being LGBTQ. We fail toreject the null hypothesis because people in the lGBTQ Community can still get Covid-19 with the vaccine or the placebo.
+
+
 ## Druggies
 
 ## Methods
