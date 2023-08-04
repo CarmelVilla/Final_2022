@@ -195,13 +195,16 @@ DruggiesData = filter(FinalData, DrugUser =="yes")
 barchartGC(~infected+treatment,data=DruggiesData)
 barchartGC(~infected+treatment,data=DruggiesData, type="percent")
 ```
+
+In this graph it shows that the people who got Covid-19, there was 88% of drug users who got the vaccine and 12% of drug users who got the placebo. There was an approximate 10% difference in those who were ok , that received the placebo or the vaccine.
+
 ### Numerical Descriptive Results
 ```{r}
 table4<-xtabs(~infected + treatment, data= DruggiesData)
 rowPerc(table4)
 colPerc(table4)
 ```
-
+In this chart it shows that those who got Covid-19 there was a 77% difference in those who got the vaccine (88%) and the ones who received the placebo (12%). The drug users that were ok there was a small difference of 10% among those who got the vaccine and the placebo.
 
 
 ## Inferential Results
@@ -215,8 +218,11 @@ The P-value in the Chi-squared test is 0.000000002842 which is to small, therefo
 
 # Overall Results and Conclusions
 
-In the original question we asked if the vaccine was able to prevent Covid-19 among these subgroups: Males, Females,LGBTQ and Drug users. We have found that the vaccine is ineffective at preventing Covid-19 in those subgroups.
-We asked if the vaccine was effective in preventing Covid-19
+
+
+In the original question we asked if the vaccine was able to prevent Covid-19 among these subgroups: Males, Females,LGBTQ and Drug users. We have found that the vaccine is ineffective at preventing Covid-19 in those subgroups, therefore we fail to reject the null hypothesis.
+We inquired as to whether the vaccine was successful in preventing Covid-19 inside the male subgroup. Our results finally led us to conclude that the vaccine is innefective in preventing Covid-19 among males. For this subgroup, we fail to reject the null hypothesis.Since the vaccine was unable to prevent Covid-19 in the subgroup of females when the identical question was posed, we fail to reject the null hypothesis. The LGBTQ Community was also included in the question, and our data indicates that the vaccine did not successfully prevent Covid-19, thus we fail to reject the null hypothesis. The same questions were asked of the drug users as well, and our data indicates that the vaccination did not prevent Covid-19, therefore we fail to reject the null hypothesis do to no difference.
+
 
 
 
