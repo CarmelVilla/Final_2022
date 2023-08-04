@@ -53,7 +53,7 @@ barchartGC(~infected+treatment,data=maleData)
 barchartGC(~infected+treatment,data=maleData,type="percent")
 ```
 
-The graph shows that among the males who got Covid, there was 30% who received the vaccine and 70% who got the placebo. It also shows that there was a slight difference in those who received the vaccineand were ok.
+The graph shows that among the males who got Covid, there was 30% who received the vaccine and 70% who got the placebo. It also shows that there was a difference in those who received the vaccine and were ok.
 
 ###Numerical Descriptive Results
 ```{r}
@@ -109,7 +109,7 @@ rowPerc(table2)
 colPerc(table2)
 ```
 
-Among those who got Covid-19 there was a 20% difference among the females who received the vaccine(40%) and the placebo (60%). The was no difference in people that were ok.
+Among those who got Covid-19 there was a 20% difference among the females who received the vaccine(40%) and the placebo (60%). There was no difference in people that were ok.
 
 
 ## Inferential Results
@@ -165,7 +165,7 @@ chisqtestGC(table3)
 fisher.test(table3)
 ```
 
-The Chi=squared p-value is 0.0000000668, which is too small.Therefore the vaccine is not preventable against Covid-19 among the LGBTQ. In the Fisher's Exact Test the p-value 0.00000001029 meaning there is a small difference in getting Covid-19 and being LGBTQ. We fail toreject the null hypothesis because people in the lGBTQ Community can still get Covid-19 with the vaccine or the placebo.
+The Chi=squared p-value is 0.0000000668, which is too small.Therefore the vaccine is not preventable against Covid-19 among the LGBTQ. In the Fisher's Exact Test the p-value 0.00000001029 meaning there is a small difference in getting Covid-19 and being LGBTQ. We fail to reject the null hypothesis because people in the lGBTQ Community can still get Covid-19 with the vaccine or the placebo.
 
 
 ## Druggies
